@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Drawer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Fractal Drawer</h1>
+  <div class="controls">
+    <label for="fractalType">Select Fractal Type: </label>
+    <select id="fractalType">
+      <option value="sierpinski">Sierpinski Triangle</option>
+      <option value="menger">Menger Sponge</option>
+    </select>
+    <label for="depth">Enter Depth (0-10): </label>
+    <input type="number" id="depth" min="0" max="10" value="0">
+    <button onclick="drawFractal()">Draw Fractal</button>
+  </div>
+  <div class="zoom-controls">
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <button onclick="resetZoom()">Reset Zoom</button>
+  </div>
+  <canvas id="fractalCanvas" width="800" height="800"></canvas>
+
+  <script src="fractal.js"></script>
+</body>
+</html>
